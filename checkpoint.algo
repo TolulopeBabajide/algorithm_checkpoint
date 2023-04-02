@@ -1,0 +1,23 @@
+length := 0
+word_count := 0
+vowel_count := 0
+
+WHILE (true) DO
+    character := READ_NEXT_CHARACTER()
+    IF (character == '.') THEN
+        EXIT_LOOP()
+    END_IF
+    length := length + 1
+    IF (character == 'a' OR character == 'e' OR character == 'i' OR character == 'o' OR character == 'u') THEN
+        vowel_count := vowel_count + 1
+    END_IF
+    IF (character == ' ') THEN
+        word_count := word_count + 1
+    END_IF
+END_WHILE
+
+word_count := word_count + 1
+
+WRITE("Length of the sentence: ", length)
+WRITE("Number of words in the sentence: ", word_count)
+WRITE("Number of vowels in the sentence: ", vowel_count)
